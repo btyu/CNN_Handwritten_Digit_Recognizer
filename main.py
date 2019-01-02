@@ -70,12 +70,12 @@ class Recognizer(BoxLayout):
     # 声明程序UI组件的函数，并且将它们添加到窗口上
     def draw_window(self):
         # Clear button  清除按钮
-        self.clear_button = Button(text='清除', font_name=NumberRecognizerApp.font_name, size_hint=(1, 4 / 45),
+        self.clear_button = Button(text='清除', font_name=CNN_Handwritten_Digit_RecognizerApp.font_name, size_hint=(1, 4 / 45),
                                    background_color=(255, 165 / 255, 0, 1))
         # Painting board  画板
         self.painter = PaintWidget(self, size_hint=(1, 8 / 9))
         # Label for hint text  提示文字标签
-        self.hint_label = Label(font_name=NumberRecognizerApp.font_name, size_hint=(1, 1 / 45))
+        self.hint_label = Label(font_name=CNN_Handwritten_Digit_RecognizerApp.font_name, size_hint=(1, 1 / 45))
         # Label for predicted number  识别数字展示标签
         self.result_label = Label(font_size=200, size_hint=(1, 1 / 3))
         # Label for some info  展示一些信息的标签
@@ -137,7 +137,7 @@ class Recognizer(BoxLayout):
 
 # Main app class
 # 主程序类
-class NumberRecognizerApp(App):
+class CNN_Handwritten_Digit_RecognizerApp(App):
     font_name = r'DroidSansFallback.ttf'
 
     def build(self):
@@ -145,4 +145,4 @@ class NumberRecognizerApp(App):
 
 
 if __name__ == '__main__':
-    NumberRecognizerApp().run()
+    CNN_Handwritten_Digit_RecognizerApp().run()
